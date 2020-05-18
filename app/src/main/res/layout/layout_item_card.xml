@@ -3,14 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_marginTop="@dimen/margin_default"
+    android:layout_marginBottom="@dimen/margin_default"
     android:layout_marginStart="@dimen/margin_default"
     android:layout_marginEnd="@dimen/margin_default"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
     app:cardCornerRadius="@dimen/card_corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,6 +22,7 @@
             android:layout_margin="@dimen/margin_default"
             android:textStyle="bold"
             android:textSize="@dimen/font_size_large"
+            android:fontFamily="@font/muli"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -45,6 +44,7 @@
             android:layout_marginStart="@dimen/activity_margin_small"
             android:layout_marginTop="@dimen/activity_margin_small"
             android:textSize="14sp"
+            android:fontFamily="@font/muli"
             app:layout_constraintStart_toEndOf="@id/ic_person"
             app:layout_constraintTop_toBottomOf="@id/item_title"
             tools:text="Kevin" />
@@ -65,6 +65,7 @@
             android:layout_marginStart="@dimen/activity_margin_small"
             android:layout_marginTop="@dimen/activity_margin_small"
             android:textSize="14sp"
+            android:fontFamily="@font/muli"
             app:layout_constraintStart_toEndOf="@id/ic_school"
             app:layout_constraintTop_toBottomOf="@id/item_name"
             tools:text="TK Bintang Kecil Jakarta" />
@@ -86,6 +87,7 @@
             android:layout_marginTop="@dimen/activity_margin_small"
             android:layout_marginBottom="@dimen/margin_default"
             android:textSize="14sp"
+            android:fontFamily="@font/muli"
             app:layout_constraintStart_toEndOf="@id/ic_date"
             app:layout_constraintTop_toBottomOf="@id/item_school_name"
             tools:text="20 December" />
@@ -106,6 +108,7 @@
             android:layout_marginTop="@dimen/activity_margin_small"
             android:layout_marginStart="@dimen/activity_margin_small"
             android:textSize="14sp"
+            android:fontFamily="@font/muli"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_clock"
             app:layout_constraintTop_toBottomOf="@id/item_school_name"
@@ -139,9 +142,18 @@
             android:background="@drawable/bg_clickable_ripple"
             android:clickable="true"
             android:focusable="true"
+            android:fontFamily="@font/muli"
+            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/item_date"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:text="Action"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toTopOf="@id/v_bottom_action"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -2,6 +2,7 @@ package com.mauldev.iisapp.adapter
 
 import android.content.Context
 import android.view.View
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.mauldev.iisapp.R
 import com.mauldev.iisapp.model.Pengumuman
@@ -35,7 +36,8 @@ class MainItemViewHolder(view: View) : RecyclerView.ViewHolder(view){
     private fun initView(item: Pengumuman){
 
         if (item.isConfirmed){
-            bottomActionLayout.background = context.getDrawable(R.color.colorPrimary)
+            bottomActionLayout.background = context.getDrawable(R.color.white)
+            bottomAction.setTextColor(ContextCompat.getColor(context, R.color.orange))
             bottomAction.text = item.confirmationStatus
         } else {
             bottomActionLayout.background = context.getDrawable(R.color.colorAccent)
