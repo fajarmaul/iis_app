@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/margin_default"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default"
+            android:textStyle="bold"
+            android:textSize="@dimen/font_size_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <ImageView
+            android:id="@+id/ic_person"
+            android:layout_width="@dimen/item_icon_size"
+            android:layout_height="@dimen/item_icon_size"
+            android:src="@drawable/icon_kids"
+            app:layout_constraintBottom_toBottomOf="@+id/item_name"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toTopOf="@+id/item_name" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_small"
+            android:layout_marginTop="@dimen/activity_margin_small"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ic_person"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            tools:text="Kevin" />
+
+        <ImageView
+            android:id="@+id/ic_school"
+            android:layout_width="@dimen/item_icon_size"
+            android:layout_height="@dimen/item_icon_size"
+            android:src="@drawable/icon_school"
+            app:layout_constraintBottom_toBottomOf="@+id/item_school_name"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toTopOf="@id/item_school_name" />
+
+        <TextView
+            android:id="@+id/item_school_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_small"
+            android:layout_marginTop="@dimen/activity_margin_small"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ic_school"
+            app:layout_constraintTop_toBottomOf="@id/item_name"
+            tools:text="TK Bintang Kecil Jakarta" />
+
+        <ImageView
+            android:id="@+id/ic_date"
+            android:layout_width="@dimen/item_icon_size"
+            android:layout_height="@dimen/item_icon_size"
+            android:src="@drawable/icon_date"
+            app:layout_constraintBottom_toBottomOf="@+id/item_date"
+            app:layout_constraintStart_toStartOf="@id/item_title"
+            app:layout_constraintTop_toTopOf="@id/item_date" />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_margin_small"
+            android:layout_marginTop="@dimen/activity_margin_small"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_date"
+            app:layout_constraintTop_toBottomOf="@id/item_school_name"
+            tools:text="20 December" />
+
+        <ImageView
+            android:id="@+id/ic_clock"
+            android:layout_width="@dimen/item_icon_size"
+            android:layout_height="@dimen/item_icon_size"
+            android:src="@drawable/icon_time"
+            app:layout_constraintBottom_toBottomOf="@+id/item_date"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@id/item_date" />
+
+        <TextView
+            android:id="@+id/item_clock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_small"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/activity_margin_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ic_clock"
+            app:layout_constraintTop_toBottomOf="@id/item_school_name"
+            tools:text="20.00-21.00" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -15,13 +15,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initView() {
-
-        back_button.setOnClickListener {
-            Toast.makeText(this, "Ura", Toast.LENGTH_SHORT).show()
-        }
-
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         toolbar.title = "Pengumuman"
+
+        back_button.setOnClickListener {
+            Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show()
+        }
     }
 }
