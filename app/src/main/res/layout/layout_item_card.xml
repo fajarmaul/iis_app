@@ -3,7 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_margin="@dimen/margin_default"
+    android:layout_marginTop="@dimen/margin_default"
+    android:layout_marginStart="@dimen/margin_default"
+    android:layout_marginEnd="@dimen/margin_default"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -117,6 +119,7 @@
             app:layout_constraintGuide_percent="0.5"/>
 
         <View
+            android:id="@+id/v_bottom_action"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@color/colorAccent"
