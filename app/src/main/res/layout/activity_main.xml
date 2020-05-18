@@ -49,12 +49,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pengumuman"
-                    android:fontFamily="@font/muli_bold"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/muli"
+                    android:text="@string/pengumuman"
                     android:textColor="#fff"
-                    android:layout_centerInParent="true"/>
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
             </RelativeLayout>
 
