@@ -2,4 +2,5 @@
     <string name="app_name">IISApp</string>
     <string name="pengumuman">Pengumuman</string>
     <string name="konfirmasi_kedatangan">Konfirmasi Kedatangan</string>
+    <string name="urutkan">Urutkan</string>
 </resources>
