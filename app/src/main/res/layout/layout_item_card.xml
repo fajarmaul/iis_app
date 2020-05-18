@@ -7,6 +7,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
     app:cardCornerRadius="@dimen/card_corner_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,7 +84,6 @@
             android:layout_marginTop="@dimen/activity_margin_small"
             android:layout_marginBottom="@dimen/margin_default"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@id/ic_date"
             app:layout_constraintTop_toBottomOf="@id/item_school_name"
             tools:text="20 December" />
@@ -101,10 +102,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_margin_small"
-            android:layout_marginBottom="@dimen/margin_default"
-            android:textSize="14sp"
             android:layout_marginStart="@dimen/activity_margin_small"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/ic_clock"
             app:layout_constraintTop_toBottomOf="@id/item_school_name"
@@ -116,6 +115,30 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.5"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="@id/item_bottom_action"
+            app:layout_constraintEnd_toEndOf="@id/item_bottom_action"
+            app:layout_constraintTop_toTopOf="@id/item_bottom_action"
+            app:layout_constraintBottom_toBottomOf="@id/item_bottom_action"/>
+
+        <TextView
+            android:id="@+id/item_bottom_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:padding="@dimen/default_padding"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_clickable_ripple"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toBottomOf="@id/item_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Action"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
