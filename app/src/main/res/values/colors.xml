@@ -11,5 +11,6 @@
     <color name="grey">#757575</color>
     <color name="orange">#FFA05F</color>
     <color name="divider">#E5E5E5</color>
+    <color name="bottomsheet_divider">#E0E0E0</color>
 
 </resources>

@@ -5,10 +5,16 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.mauldev.iisapp.adapter.MainItemAdapter
+import com.mauldev.iisapp.components.UrutkanBottomSheetFragment
+import com.mauldev.iisapp.components.UrutkanBottomSheetFragment.Companion.CLOSEST
+import com.mauldev.iisapp.components.UrutkanBottomSheetFragment.Companion.LATEST
+import com.mauldev.iisapp.components.UrutkanBottomSheetFragment.Companion.UNREAD
 import com.mauldev.iisapp.model.Pengumuman
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    private var latestType: Int = LATEST
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,12 +32,14 @@ class MainActivity : AppCompatActivity() {
         back_button.setOnClickListener {
             Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show()
         }
+
+        vg_sort_button.setOnClickListener {
+            showSortBottomSheet()
+        }
     }
 
     private fun initData(){
         val pengumumanList = mutableListOf<Pengumuman>()
-
-
 
         for (index in 1..4){
             val pengumuman = Pengumuman().apply {
@@ -60,4 +68,26 @@ class MainActivity : AppCompatActivity() {
         rv_main.layoutManager = LinearLayoutManager(this)
         rv_main.adapter = adapter
     }
+
+    private fun showSortBottomSheet(){
+        val bottomSheetFragment = UrutkanBottomSheetFragment.newInstance(latestType, object: UrutkanBottomSheetFragment.OnTypeSelectedListener{
+
+            override fun onTypeSelected(type: Int) {
+                latestType = type
+
+                tv_urutkan.text = if (type == LATEST){
+                    "Urut berdasarkan \"Terbaru dibagikan\""
+                } else if (type == CLOSEST) {
+                    "Urut berdasarkan \"Tanggal kegiatan terdekat\""
+                } else if (type == UNREAD){
+                    "Urut berdasarkan \"Belum dibaca\""
+                } else {
+                    ""
+                }
+            }
+
+        })
+        bottomSheetFragment.show(supportFragmentManager, "sort_bottom_sheet")
+    }
+
 }

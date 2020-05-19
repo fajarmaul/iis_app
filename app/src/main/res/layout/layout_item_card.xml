@@ -15,15 +15,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <View
+            android:id="@+id/view_circle"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginEnd="@dimen/margin_default"
+            android:background="@drawable/shape_circle_blue"
+            app:layout_constraintBottom_toBottomOf="@+id/item_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/item_title" />
+
         <TextView
             android:id="@+id/item_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/margin_default"
-            android:textStyle="bold"
-            android:textSize="@dimen/font_size_large"
             android:fontFamily="@font/muli"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/font_size_large"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/view_circle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Title" />

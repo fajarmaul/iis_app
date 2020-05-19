@@ -5,6 +5,7 @@
     <dimen name="default_card_radius">4dp</dimen>
     <dimen name="margin_default">16dp</dimen>
     <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_bottomsheet_item">24dp</dimen>
     <dimen name="activity_margin_small">8dp</dimen>
     <dimen name="card_corner_radius">16dp</dimen>
     <dimen name="font_size_small">12sp</dimen>
@@ -16,8 +17,8 @@
     <dimen name="progress_bar_size">36dp</dimen>
     <dimen name="item_decorator_gap">4dp</dimen>
     <dimen name="card_main_item_elevation">4dp</dimen>
-    <dimen name="movie_detail_icon_size">14dp</dimen>
     <dimen name="item_icon_size">20dp</dimen>
     <dimen name="filter_button_radius">32dp</dimen>
+    <dimen name="checkbox_size">24dp</dimen>
 
 </resources>

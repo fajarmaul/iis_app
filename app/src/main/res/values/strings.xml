@@ -3,4 +3,7 @@
     <string name="pengumuman">Pengumuman</string>
     <string name="konfirmasi_kedatangan">Konfirmasi Kedatangan</string>
     <string name="urutkan">Urutkan</string>
+    <string name="terbaru_dibagikan">Terbaru dibagikan</string>
+    <string name="tanggal_kegiatan_terdekat">Tanggal kegiatan terdekat</string>
+    <string name="belum_dibaca">Belum dibaca</string>
 </resources>

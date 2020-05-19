@@ -18,6 +18,7 @@ class MainItemViewHolder(view: View) : RecyclerView.ViewHolder(view){
     private var time = view.item_clock
     private var bottomAction = view.item_bottom_action
     private var bottomActionLayout = view.v_bottom_action
+    private var viewCircle = view.view_circle
 
     fun setData(item: Pengumuman, listener: MainItemAdapter.OnItemClickListener){
         title.text = item.title
@@ -39,9 +40,11 @@ class MainItemViewHolder(view: View) : RecyclerView.ViewHolder(view){
             bottomActionLayout.background = context.getDrawable(R.color.white)
             bottomAction.setTextColor(ContextCompat.getColor(context, R.color.orange))
             bottomAction.text = item.confirmationStatus
+            viewCircle.visibility = View.INVISIBLE
         } else {
             bottomActionLayout.background = context.getDrawable(R.color.colorAccent)
             bottomAction.text = context.getString(R.string.konfirmasi_kedatangan)
+            viewCircle.visibility = View.VISIBLE
         }
 
     }
